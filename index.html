@@ -55,7 +55,7 @@
               <a><div data-toggle="modal" data-target="#contact"><h2>Contact</h2></div></a>
             </div>
             <div class="col-md-2">
-              <a href=""><h2 style="margin-left: 151px;">Shows</h2></a>
+              <a href=""><h2 style="margin-left: 127px;">Shows</h2></a>
             </div>
             <div class="row">
               <div class="col-xs-12">
@@ -167,7 +167,7 @@
 
 
 
-
+  <script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -179,7 +179,18 @@
 
 
 
+<script>
+$(document).ready(function() {
+console.log("document ready");
 
-
+/****************************** Animation ****************************/
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+});
+});
+</script>
 
 </body></html>
